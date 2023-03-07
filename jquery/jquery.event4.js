@@ -1,7 +1,10 @@
 $(function() {
     $('#rgbSub').on('click', function(event) {
         if ($('#rgb1').val()=="") {
-            alert("veuillez remplir le champ rouge")
+            
+            $( "input" ).focus(function() {
+                $( this ).css( "border-color", "red" )
+              });
         }
 
         if ($('#rgb2').val()=="") {
