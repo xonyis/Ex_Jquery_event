@@ -1,14 +1,19 @@
 $(function() {
+    
     $('#btnForm').on('click', function(event) {
         event.preventDefault();
+        var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
         let prenom = $('#fname').val();
         let nom = $('#lname').val();
         let date = $('#birth').val();
-        console.log(prenom, nom, date);
-
-        $('.rFname').text('Prenom :' + prenom)
-        $('.rLname').text('Nom :' + nom)
-        $('.rBirth').text('Date :' + date)
+        if ($('#fname').val()=="" || $('#lname').val()=="" || $('#birth').val()=="") {
+            alert("Lose")
+        }else {
+            if (typeof prenom === "string" || typeof nom === "string") {
+                alert("Win")
+            }else {
+                alert('Lose 2')
+            }
+        }
     })
-
 })

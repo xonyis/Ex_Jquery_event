@@ -4,8 +4,8 @@ $(function() {
         let bleu = $('#rgb2').val();
         let vert = $('#rgb3').val();
         
-        if (rouge < 255 || blue < 255 || vert < 255) {
-            
+        if (rouge < 255 || bleu < 255 || vert < 255) {
+            console.log('erroe');
         } else {
             $(".colorContainer").css('background', 'rgb('+rouge+','+bleu+','+vert+')');
         }
